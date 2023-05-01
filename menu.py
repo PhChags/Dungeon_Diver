@@ -1,6 +1,7 @@
 from PPlay.window import *
 from PPlay.sprite import *
 from PPlay.mouse import * #como já fiz umas semanas da matéria antes, já sei como pegar comandos do teclado e mouse utilizando o PPlay :P
+#from pause import pause caso queira vizualizar a interface da classe pause retire esse comentário e chame a função pause em algum dos ifs não implementados
 
 #Inicializações
 screen = Window(1224, 822); #não necessariamente configuração final 
@@ -47,6 +48,8 @@ qutred.y = screen.height/1.22+50;
 
 #Game Loop
 while True:
+    screen.set_background_color((0, 0, 0));
+
     if (mouse.is_over_object(start)):
         start.hide();
         startred.draw();
