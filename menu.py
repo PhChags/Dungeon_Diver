@@ -1,6 +1,7 @@
 from PPlay.window import *
 from PPlay.sprite import *
 from PPlay.mouse import * #como já fiz umas semanas da matéria antes, já sei como pegar comandos do teclado e mouse utilizando o PPlay :P
+from options import options
 #from pause import pause caso queira vizualizar a interface da classe pause retire esse comentário e chame a função pause em algum dos ifs não implementados
 
 #Inicializações
@@ -67,7 +68,8 @@ while True:
     if (mouse.is_over_object(opt)):
         opt.hide();
         optred.draw();
-        #if (mouse.is_button_pressed(1)): Nesse aqui mostramos a tela de opções (originalmente apenas com opção de tirar som e/ou musica)
+        if (mouse.is_button_pressed(1)): #Nesse aqui mostramos a tela de opções (originalmente apenas com opção de tirar som e/ou musica)
+            options();
     else:
         opt.unhide();
 

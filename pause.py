@@ -2,13 +2,12 @@
 #se quiser visualizar a interface, basta chamar a função pause na classe menu
 from PPlay.window import *
 from PPlay.sprite import *
-from PPlay.keyboard import *
 from PPlay.mouse import *
+from options import options
 
 #inicializações
 screen = Window(1224, 822);
 mouse = Window.get_mouse();
-teclado = keyboard.Keyboard();
 
 #função pause
 def pause ():
@@ -59,7 +58,8 @@ def pause ():
         if (mouse.is_over_object(opt)):
             opt.hide();
             optred.draw();
-            #if (mouse.is_button_pressed(1)): Chama-se função opções
+            if (mouse.is_button_pressed(1)): 
+                options();
         else:
             opt.unhide();
 
