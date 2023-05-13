@@ -3,43 +3,28 @@ from PPlay.sprite import *
 from PPlay.mouse import *
 
 #inicializações
-screen = Window(1224, 822);
+screen = Window(1224, 720);
 mouse = Window.get_mouse();
 
 #função options
 def options ():
     #colocando o logo options encima da tela
-    options = Sprite("Assets/options/optlg.png");
-    options.x = screen.width / 2 - options.width / 2;
-    options.y = screen.height / 10;
+    options = Sprite("Assets/options/logoopt.png");
+    options.set_position(screen.width/2 - options.width/2, screen.height/16);
 
     #inicializando o botão: retorna para o jogo
     retrn = Sprite("Assets/options/rtrn.png");
-    retrn.x = screen.width / 2 - retrn.width / 2;
-    retrn.y = screen.height /2 + 120;
+    retrn.set_position(screen.width - retrn.width, screen.height - screen.height/16);
 
-    retrnred = Sprite("Assets/options/rtrnred.png");
-    retrnred.x = screen.width / 2 - retrnred.width / 2;
-    retrnred.y = screen.height /2 + 120;
+    retrnpink = Sprite("Assets/options/pinkretrn.png");
+    retrnpink.set_position(screen.width - retrn.width, screen.height - screen.height/16);
 
-    #inicializando o botão: opções
-    som = Sprite("Assets/options/som.png");
-    som.x = screen.width / 2 - som.width / 2;
-    som.y = screen.height /2 - 120;
+    #inicializando escritos som e musica
+    song = Sprite("Assets/options/sng.png");
+    song.set_position(screen.width/2 - song.width/2, screen.height/2 - screen.height/8);
 
-    #somred = Sprite("Assets/options/somred.png");
-    #somred.x = screen.width / 2 - somred.width / 2;
-    #somred.y = screen.height /2;
-
-    #inicializando o botão: sair (que leva ao menu principal)
-    music = Sprite("Assets/options/music.png");
-    music.x = screen.width / 2 - music.width / 2;
-    music.y = screen.height /2;
-
-    #musicred = Sprite("Assets/options/musicred.png");
-    #musicred.x = screen.width / 2 - musicred.width / 2;
-    #musicred.y = screen.height /2 + 60; fiz esses sprites, 
-    #mas apenas agora percebi que não devemos utiliza-los, pois haverá um botão com um altofalante com som e um mutado para representar com ou sem som e uma "sinfonia" e uma sinfonia riscada para representar com ou sem música
+    music = Sprite("Assets/options/msc.png");
+    music.set_position(screen.width/2 - music.width/2, screen.height/2 + screen.height/8);
 
     #Game Loop
     while True:
@@ -47,7 +32,7 @@ def options ():
 
         if (mouse.is_over_object(retrn)):
             retrn.hide();
-            retrnred.draw();
+            retrnpink.draw();
             if (mouse.is_button_pressed(1)):
                 return False;
         else:
@@ -56,5 +41,5 @@ def options ():
         options.draw();
         retrn.draw();
         music.draw();
-        som.draw();
+        song.draw();
         screen.update();
