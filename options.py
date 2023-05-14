@@ -1,10 +1,13 @@
 from PPlay.window import *
 from PPlay.sprite import *
 from PPlay.mouse import *
+from PPlay.gameimage import *
 
 #inicializações
 screen = Window(1224, 720);
 mouse = Window.get_mouse();
+
+background = GameImage("Assets/menu/sky1.png");
 
 #função options
 def options ():
@@ -54,7 +57,7 @@ def options ():
 
     #Game Loop
     while True:
-        screen.set_background_color((0,0,0));
+        background.draw();
 
     #Ainda falta manter as configurações ativas para qunado o menu opções for aberto denovo
     #Mecanismo ativa/desativa som (apenas interface)

@@ -3,11 +3,14 @@
 from PPlay.window import *
 from PPlay.sprite import *
 from PPlay.mouse import *
+from PPlay.gameimage import *
 from options import options
 
 #inicializações
 screen = Window(1224, 720);
 mouse = Window.get_mouse();
+
+background = GameImage("Assets/menu/sky1.png");
 
 #função pause
 def pause ():
@@ -38,7 +41,7 @@ def pause ():
 
     #Game Loop
     while True:
-        screen.set_background_color((0,0,0));
+        background.draw();
 
         if (mouse.is_over_object(qt)):
             qt.hide();

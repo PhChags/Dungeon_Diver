@@ -43,7 +43,6 @@ qutpink.set_position(screen.width/2 - qut.width/2.3, screen.height/1.22+50);
 
 #Game Loop
 while True:
-
     background.draw();
 
     if (mouse.is_over_object(start)):
