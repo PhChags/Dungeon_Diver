@@ -20,24 +20,24 @@ def pause ():
 
     #inicializando o botão: retorna para o jogo
     retrn = Sprite("Assets/pause/rtrn.png");
-    retrn.set_position(screen.width/2 - retrn.width/2, screen.height/1.44+50);
+    retrn.set_position(screen.width/2 - retrn.width/2, screen.height/1.31);
 
     retrnpink = Sprite("Assets/pause/pinkretrn.png");
-    retrnpink.set_position(screen.width/2 - retrnpink.width/2, screen.height/1.44+50);
+    retrnpink.set_position(screen.width/2 - retrnpink.width/2, screen.height/1.31);
 
     #inicializando o botão: opções
     opt = Sprite("Assets/pause/opt.png");
-    opt.set_position(screen.width/2 - opt.width/2, screen.height/1.32+50);
+    opt.set_position(screen.width/2 - opt.width/2, screen.height/1.21);
 
     optpink = Sprite("Assets/pause/pinkopt.png");
-    optpink.set_position(screen.width/2 - opt.width/2, screen.height/1.32+50);
+    optpink.set_position(screen.width/2 - opt.width/2, screen.height/1.21);
 
     #inicializando o botão: sair (que leva ao menu principal)
     qt = Sprite("Assets/pause/quit.png");
-    qt.set_position(screen.width/2 - qt.width/2.3, screen.height/1.22+50);
+    qt.set_position(screen.width/2 - qt.width/2, screen.height/1.125);
 
     qtpink = Sprite("Assets/pause/pinkquit.png");
-    qtpink.set_position(screen.width/2 - qt.width/2.3, screen.height/1.22+50);
+    qtpink.set_position(screen.width/2 - qt.width/2, screen.height/1.125);
 
     #Game Loop
     while True:

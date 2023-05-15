@@ -3,7 +3,7 @@ from PPlay.sprite import *
 from PPlay.mouse import * #como já fiz umas semanas da matéria antes, já sei como pegar comandos do teclado e mouse utilizando o PPlay :P
 from PPlay.gameimage import *
 from options import options
-#from pause import pause #caso queira vizualizar a interface da classe pause retire esse comentário e chame a função pause em algum dos ifs não implementados
+from pause import pause #caso queira vizualizar a interface da classe pause retire esse comentário e chame a função pause em algum dos ifs não implementados
 
 #Inicializações
 screen = Window(1224, 720); #não necessariamente configuração final 
@@ -17,28 +17,28 @@ logo = Sprite("Assets/menu/logo.png");
 logo.set_position(screen.width/2 - logo.width/2, screen.height/16);
 
 start = Sprite("Assets/menu/start.png");
-start.set_position(screen.width/2 - start.width/2, screen.height/1.58+50);
+start.set_position(screen.width/2 - start.width/2, screen.height/1.42);
 
 startpink = Sprite("Assets/menu/pinkstart.png");
-startpink.set_position(screen.width/2 - startpink.width/2, screen.height/1.58+50);
+startpink.set_position(screen.width/2 - startpink.width/2, screen.height/1.42);
 
 rank = Sprite("Assets/menu/rank.png");
-rank.set_position(screen.width/2 - rank.width/2, screen.height/1.44+50);
+rank.set_position(screen.width/2 - rank.width/2, screen.height/1.31);
 
 rankpink = Sprite("Assets/menu/pinkrank.png");
-rankpink.set_position(screen.width/2 - rankpink.width/2, screen.height/1.44+50);
+rankpink.set_position(screen.width/2 - rankpink.width/2, screen.height/1.31);
 
 opt = Sprite("Assets/menu/opt.png");
-opt.set_position(screen.width/2 - opt.width/2, screen.height/1.32+50);
+opt.set_position(screen.width/2 - opt.width/2, screen.height/1.21);
 
 optpink = Sprite("Assets/menu/pinkopt.png");
-optpink.set_position(screen.width/2 - opt.width/2, screen.height/1.32+50);
+optpink.set_position(screen.width/2 - opt.width/2, screen.height/1.21);
 
 qut = Sprite("Assets/menu/quit.png");
-qut.set_position(screen.width/2 - qut.width/2.3, screen.height/1.22+50);
+qut.set_position(screen.width/2 - qut.width/2, screen.height/1.125);
 
 qutpink = Sprite("Assets/menu/pinkquit.png");
-qutpink.set_position(screen.width/2 - qut.width/2.3, screen.height/1.22+50);
+qutpink.set_position(screen.width/2 - qut.width/2, screen.height/1.125);
 #os valores aleátorios colocados aqui (como 1.22), foram obtidos através de testes até que eu os considerasse ergonomicos; (sinta-se livre para modifica-los :P)
 
 #Game Loop
@@ -55,8 +55,8 @@ while True:
     if (mouse.is_over_object(rank)):
         rank.hide();
         rankpink.draw();
-        #if (mouse.is_button_pressed(1)): #Já nesse mostramos a tela de rank
-            #pause();
+        if (mouse.is_button_pressed(1)): #Já nesse mostramos a tela de rank
+            pause();
     else:
         rank.unhide();
     
