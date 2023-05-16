@@ -10,7 +10,7 @@ from game import game #caso queira vizualizar a interface da classe pause, atual
 screen = Window(1224, 720); #não necessariamente configuração final 
 screen.set_title("Dungeon Diver");
 
-background = GameImage("Assets/menu/sky1.png");
+background = GameImage("Assets/backgrounds/sky1.png");
 
 mouse = Window.get_mouse();
 

@@ -7,7 +7,7 @@ from pause import pause
 screen = Window(1224, 720);
 keyboard = screen.get_keyboard();
 
-background = GameImage("Assets/menu/sky1.png");
+background = GameImage("Assets/backgrounds/sky1.png");
 
 def game():
     while True:

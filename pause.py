@@ -10,7 +10,7 @@ from options import options
 screen = Window(1224, 720);
 mouse = Window.get_mouse();
 
-background = GameImage("Assets/menu/sky1.png");
+background = GameImage("Assets/backgrounds/sky1.png");
 
 #função pause
 def pause ():

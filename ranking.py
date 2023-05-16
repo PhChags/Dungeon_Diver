@@ -7,7 +7,7 @@ from PPlay.mouse import *
 screen = Window(1224, 720);
 mouse = Window.get_mouse();
 
-background = GameImage("Assets/menu/sky1.png");
+background = GameImage("Assets/backgrounds/sky1.png");
 
 def ranking():
     #inicializando a logo rank encima da tela
