@@ -3,7 +3,8 @@ from PPlay.sprite import *
 from PPlay.mouse import * #como já fiz umas semanas da matéria antes, já sei como pegar comandos do teclado e mouse utilizando o PPlay :P
 from PPlay.gameimage import *
 from options import options
-from pause import pause #caso queira vizualizar a interface da classe pause retire esse comentário e chame a função pause em algum dos ifs não implementados
+from ranking import ranking
+from game import game #caso queira vizualizar a interface da classe pause, atualmente a classe game só chama a classe pause ao teclar "ESC"
 
 #Inicializações
 screen = Window(1224, 720); #não necessariamente configuração final 
@@ -48,7 +49,8 @@ while True:
     if (mouse.is_over_object(start)):
         start.hide();
         startpink.draw();
-        #if (mouse.is_button_pressed(1)): Nesse if aqui iniciamos o jogo :P
+        if (mouse.is_button_pressed(1)): #Nesse if aqui iniciamos o jogo :P
+            game();
     else:
         start.unhide();
 
@@ -56,7 +58,7 @@ while True:
         rank.hide();
         rankpink.draw();
         if (mouse.is_button_pressed(1)): #Já nesse mostramos a tela de rank
-            pause();
+            ranking();
     else:
         rank.unhide();
     

@@ -43,6 +43,7 @@ def pause ():
     while True:
         background.draw();
 
+    #botão quit
         if (mouse.is_over_object(qt)):
             qt.hide();
             qtpink.draw();
@@ -51,6 +52,7 @@ def pause ():
         else:
             qt.unhide();
 
+    #botão opções
         if (mouse.is_over_object(opt)):
             opt.hide();
             optpink.draw();
@@ -58,7 +60,8 @@ def pause ():
                 options();
         else:
             opt.unhide();
-
+        
+    #botao retorna
         if (mouse.is_over_object(retrn)):
             retrn.hide();
             retrnpink.draw();
