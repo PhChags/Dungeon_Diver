@@ -1,24 +1,24 @@
-from PPlay.window import *
-from PPlay.gameimage import *
-from PPlay.sprite import *
-from PPlay.mouse import *
+from vendor.pplay.window import *
+from vendor.pplay.gameimage import *
+from vendor.pplay.sprite import *
+from vendor.pplay.mouse import *
 
 #inicializações tela
 screen = Window(1224, 720);
 mouse = Window.get_mouse();
 
-background = GameImage("Assets/backgrounds/sky1.png");
+background = GameImage("../assets/backgrounds/sky1.png");
 
 def ranking():
     #inicializando a logo rank encima da tela
-    rank = Sprite("Assets/ranking/ranklogo.png");
+    rank = Sprite("../assets/ranking/ranklogo.png");
     rank.set_position(screen.width/2 - rank.width/2, screen.height/16);
 
     #inicializando o botão: retorna para o jogo
-    retrn = Sprite("Assets/ranking/rtrn.png");
+    retrn = Sprite("../assets/ranking/rtrn.png");
     retrn.set_position(screen.width - retrn.width, screen.height - screen.height/16);
 
-    retrnpink = Sprite("Assets/ranking/pinkretrn.png");
+    retrnpink = Sprite("../assets/ranking/pinkretrn.png");
     retrnpink.set_position(screen.width - retrnpink.width, screen.height - screen.height/16);
 
     #GameLoop

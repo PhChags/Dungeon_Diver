@@ -1,13 +1,13 @@
-from PPlay.window import *
-from PPlay.gameimage import *
-from PPlay.sprite import *
-from PPlay.keyboard import *
+from vendor.pplay.window import *
+from vendor.pplay.gameimage import *
+from vendor.pplay.sprite import *
+from vendor.pplay.keyboard import *
 from pause import pause
 
 screen = Window(1224, 720);
 keyboard = screen.get_keyboard();
 
-background = GameImage("Assets/backgrounds/sky1.png");
+background = GameImage("../assets/backgrounds/sky1.png");
 
 def game():
     while True:
