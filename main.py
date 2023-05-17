@@ -14,35 +14,35 @@ screen = Window(1224, 720)
 # não necessariamente configuração final
 screen.set_title("Dungeon Diver")
 
-background = GameImage("../assets/backgrounds/sky1.png")
+background = GameImage("assets/backgrounds/sky1.png")
 
 mouse = Window.get_mouse()
 
-logo = Sprite("../assets/menu/logo.png")
+logo = Sprite("assets/menu/logo.png")
 logo.set_position(screen.width / 2 - logo.width / 2, screen.height / 16)
 
-start = Sprite("../assets/menu/start.png")
+start = Sprite("assets/menu/start.png")
 start.set_position(screen.width / 2 - start.width / 2, screen.height / 1.42)
 
-startpink = Sprite("../assets/menu/pinkstart.png")
+startpink = Sprite("assets/menu/pinkstart.png")
 startpink.set_position(screen.width / 2 - startpink.width / 2, screen.height / 1.42)
 
-rank = Sprite("../assets/menu/rank.png")
+rank = Sprite("assets/menu/rank.png")
 rank.set_position(screen.width / 2 - rank.width / 2, screen.height / 1.31)
 
-rankpink = Sprite("../assets/menu/pinkrank.png")
+rankpink = Sprite("assets/menu/pinkrank.png")
 rankpink.set_position(screen.width / 2 - rankpink.width / 2, screen.height / 1.31)
 
-opt = Sprite("../assets/menu/opt.png")
+opt = Sprite("assets/menu/opt.png")
 opt.set_position(screen.width / 2 - opt.width / 2, screen.height / 1.21)
 
-optpink = Sprite("../assets/menu/pinkopt.png")
+optpink = Sprite("assets/menu/pinkopt.png")
 optpink.set_position(screen.width / 2 - opt.width / 2, screen.height / 1.21)
 
-qut = Sprite("../assets/menu/quit.png")
+qut = Sprite("assets/menu/quit.png")
 qut.set_position(screen.width / 2 - qut.width / 2, screen.height / 1.125)
 
-qutpink = Sprite("../assets/menu/pinkquit.png")
+qutpink = Sprite("assets/menu/pinkquit.png")
 qutpink.set_position(screen.width / 2 - qut.width / 2, screen.height / 1.125)
 # os valores aleátorios colocados aqui (como 1.22), foram obtidos através de testes até que eu os considerasse ergonomicos; (sinta-se livre para modifica-los :P)
 
