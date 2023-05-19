@@ -3,6 +3,8 @@ from vendor.pplay.sprite import *
 from vendor.pplay.mouse import *  # como já fiz umas semanas da matéria antes, já sei como pegar comandos do teclado e mouse utilizando o PPlay :P
 from vendor.pplay.gameimage import *
 
+from core.asset import *
+
 from options import options
 from ranking import ranking
 from game import (
@@ -14,35 +16,35 @@ screen = Window(1224, 720)
 # não necessariamente configuração final
 screen.set_title("Dungeon Diver")
 
-background = GameImage("assets/backgrounds/sky1.png")
+background = resolve_game_image("backgrounds/sky1.png")
 
 mouse = Window.get_mouse()
 
-logo = Sprite("assets/menu/logo.png")
+logo = resolve_sprite("menu/logo.png")
 logo.set_position(screen.width / 2 - logo.width / 2, screen.height / 16)
 
-start = Sprite("assets/menu/start.png")
+start = resolve_sprite("menu/start.png")
 start.set_position(screen.width / 2 - start.width / 2, screen.height / 1.42)
 
-startpink = Sprite("assets/menu/pinkstart.png")
+startpink = resolve_sprite("menu/pinkstart.png")
 startpink.set_position(screen.width / 2 - startpink.width / 2, screen.height / 1.42)
 
-rank = Sprite("assets/menu/rank.png")
+rank = resolve_sprite("menu/rank.png")
 rank.set_position(screen.width / 2 - rank.width / 2, screen.height / 1.31)
 
-rankpink = Sprite("assets/menu/pinkrank.png")
+rankpink = resolve_sprite("menu/pinkrank.png")
 rankpink.set_position(screen.width / 2 - rankpink.width / 2, screen.height / 1.31)
 
-opt = Sprite("assets/menu/opt.png")
+opt = resolve_sprite("menu/opt.png")
 opt.set_position(screen.width / 2 - opt.width / 2, screen.height / 1.21)
 
-optpink = Sprite("assets/menu/pinkopt.png")
+optpink = resolve_sprite("menu/pinkopt.png")
 optpink.set_position(screen.width / 2 - opt.width / 2, screen.height / 1.21)
 
-qut = Sprite("assets/menu/quit.png")
+qut = resolve_sprite("menu/quit.png")
 qut.set_position(screen.width / 2 - qut.width / 2, screen.height / 1.125)
 
-qutpink = Sprite("assets/menu/pinkquit.png")
+qutpink = resolve_sprite("menu/pinkquit.png")
 qutpink.set_position(screen.width / 2 - qut.width / 2, screen.height / 1.125)
 # os valores aleátorios colocados aqui (como 1.22), foram obtidos através de testes até que eu os considerasse ergonomicos; (sinta-se livre para modifica-los :P)
 

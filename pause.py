@@ -6,38 +6,40 @@ from vendor.pplay.mouse import *
 from vendor.pplay.gameimage import *
 from options import options
 
+from core.asset import *
+
 # inicializações
 screen = Window(1224, 720)
 mouse = Window.get_mouse()
 
-background = GameImage("assets/backgrounds/sky1.png")
+background = resolve_game_image("backgrounds/sky1.png")
 
 
 # função pause
 def pause():
     # colocando o logo pause encima da tela
-    pausar = Sprite("assets/pause/pauselg.png")
+    pausar = resolve_sprite("pause/pauselg.png")
     pausar.set_position(screen.width / 2 - pausar.width / 2, screen.height / 16)
 
     # inicializando o botão: retorna para o jogo
-    retrn = Sprite("assets/pause/rtrn.png")
+    retrn = resolve_sprite("pause/rtrn.png")
     retrn.set_position(screen.width / 2 - retrn.width / 2, screen.height / 1.31)
 
-    retrnpink = Sprite("assets/pause/pinkretrn.png")
+    retrnpink = resolve_sprite("pause/pinkretrn.png")
     retrnpink.set_position(screen.width / 2 - retrnpink.width / 2, screen.height / 1.31)
 
     # inicializando o botão: opções
-    opt = Sprite("assets/pause/opt.png")
+    opt = resolve_sprite("pause/opt.png")
     opt.set_position(screen.width / 2 - opt.width / 2, screen.height / 1.21)
 
-    optpink = Sprite("assets/pause/pinkopt.png")
+    optpink = resolve_sprite("pause/pinkopt.png")
     optpink.set_position(screen.width / 2 - opt.width / 2, screen.height / 1.21)
 
     # inicializando o botão: sair (que leva ao menu principal)
-    qt = Sprite("assets/pause/quit.png")
+    qt = resolve_sprite("pause/quit.png")
     qt.set_position(screen.width / 2 - qt.width / 2, screen.height / 1.125)
 
-    qtpink = Sprite("assets/pause/pinkquit.png")
+    qtpink = resolve_sprite("pause/pinkquit.png")
     qtpink.set_position(screen.width / 2 - qt.width / 2, screen.height / 1.125)
 
     # Game Loop

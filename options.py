@@ -3,31 +3,33 @@ from vendor.pplay.sprite import *
 from vendor.pplay.mouse import *
 from vendor.pplay.gameimage import *
 
+from core.asset import *
+
 # inicializações
 screen = Window(1224, 720)
 mouse = Window.get_mouse()
 
-background = GameImage("assets/backgrounds/sky1.png")
+background = resolve_game_image("backgrounds/sky1.png")
 
 
 # função options
 def options():
     # colocando o logo options encima da tela
-    options = Sprite("assets/options/logoopt.png")
+    options = resolve_sprite("options/logoopt.png")
     options.set_position(screen.width / 2 - options.width / 2, screen.height / 16)
 
     # inicializando o botão: retorna para quem chamou a função
-    retrn = Sprite("assets/options/rtrn.png")
+    retrn = resolve_sprite("options/rtrn.png")
     retrn.set_position(screen.width - retrn.width, screen.height - screen.height / 16)
 
-    retrnpink = Sprite("assets/options/pinkretrn.png")
+    retrnpink = resolve_sprite("options/pinkretrn.png")
     retrnpink.set_position(screen.width - retrn.width, screen.height - screen.height / 16)
 
     # inicializando escritos som e musica
-    sound = Sprite("assets/options/sound.png")
+    sound = resolve_sprite("options/sound.png")
     sound.set_position(screen.width / 2 - sound.width / 2, screen.height / 2)
 
-    music = Sprite("assets/options/msc.png")
+    music = resolve_sprite("options/msc.png")
     music.set_position(screen.width / 2 - music.width / 2, screen.height / 2 + screen.height / 6)
 
     # inicializando os botões ativa/desativa som/musica
@@ -36,8 +38,8 @@ def options():
     m_click_off = False
     m_click_on = True
 
-    s_botao_off_clicado = Sprite("assets/options/greenno.png")
-    s_botao_on_clicado = Sprite("assets/options/greenyes.png")
+    s_botao_off_clicado = resolve_sprite("options/greenno.png")
+    s_botao_on_clicado = resolve_sprite("options/greenyes.png")
     s_botao_off_clicado.set_position(
         screen.width / 2 - s_botao_off_clicado.width / 2 + screen.width / 20,
         screen.height / 2 + screen.height / 16,
@@ -47,8 +49,8 @@ def options():
         screen.height / 2 + screen.height / 16,
     )
 
-    s_botao_off = Sprite("assets/options/blueno.png")
-    s_botao_on = Sprite("assets/options/blueyes.png")
+    s_botao_off = resolve_sprite("options/blueno.png")
+    s_botao_on = resolve_sprite("options/blueyes.png")
     s_botao_off.set_position(
         screen.width / 2 - s_botao_off.width / 2 + screen.width / 20,
         screen.height / 2 + screen.height / 16,
@@ -58,8 +60,8 @@ def options():
         screen.height / 2 + screen.height / 16,
     )
 
-    m_botao_off_clicado = Sprite("assets/options/greenno.png")
-    m_botao_on_clicado = Sprite("assets/options/greenyes.png")
+    m_botao_off_clicado = resolve_sprite("options/greenno.png")
+    m_botao_on_clicado = resolve_sprite("options/greenyes.png")
     m_botao_off_clicado.set_position(
         screen.width / 2 - m_botao_off_clicado.width / 2 + screen.width / 20,
         screen.height / 2 + screen.height / 4,
@@ -69,8 +71,8 @@ def options():
         screen.height / 2 + screen.height / 4,
     )
 
-    m_botao_off = Sprite("assets/options/blueno.png")
-    m_botao_on = Sprite("assets/options/blueyes.png")
+    m_botao_off = resolve_sprite("options/blueno.png")
+    m_botao_on = resolve_sprite("options/blueyes.png")
     m_botao_off.set_position(
         screen.width / 2 - m_botao_off.width / 2 + screen.width / 20,
         screen.height / 2 + screen.height / 4,
