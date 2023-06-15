@@ -7,7 +7,7 @@ from core.ui import UIButton
 
 from .ranking import Ranking
 from .options import Options
-from .game import Level
+from .game.mock_level import MockLevel
 
 
 class MainMenu(Scene):
@@ -41,7 +41,7 @@ class MainMenu(Scene):
             btn.draw()
 
         if self._buttons["start"].did_press():
-            super().show(Level())
+            super().show(MockLevel())
             return
 
         if self._buttons["rank"].did_press():
