@@ -14,14 +14,14 @@ def game_over(points):
     logo = Sprite("assets/menus/gameover/game_over.png");
     logo.set_position(janela.width/2 - logo.width/2, janela.height/16);
 
-    return save_name(points, "YOU WERE NOT ABLE TO FREE THE CITIZENS FROM THE CURSE", logo, bk);
+    return save_name(points, "YOU WERE NOT ABLE TO FREE THE ERLHYU FROM THE CURSE", logo, bk);
                 
         
 def win_screen(points):
     bk = GameImage('assets/menus/gameover/winscreen.jpg');
     logo = Sprite("assets/menus/gameover/the_end.png");
     logo.set_position(janela.width/2 - logo.width/2, janela.height/16);
-    return save_name(points, "YOU WERE ABLE TO FREE THE CITIZENS FROM THE CURSE", logo, bk);
+    return save_name(points, "YOU WERE ABLE TO FREE THE ERLHYUNIANS FROM THE CURSE", logo, bk);
 
 def save_name(points, text, logo, bk):
     background = bk;
