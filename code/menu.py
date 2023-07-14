@@ -62,7 +62,7 @@ def menu():
         if (mouse.is_over_object(qut)):
             qut.hide();
             qutpink.draw();
-            if (mouse.is_button_pressed(1)) and click > 7: 
+            if (mouse.is_button_pressed(1)) and click > 10: 
                 exit();
         else:
             qut.unhide();

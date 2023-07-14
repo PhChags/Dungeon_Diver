@@ -14,14 +14,14 @@ def game_over(points):
     logo = Sprite("assets/menus/gameover/game_over.png");
     logo.set_position(janela.width/2 - logo.width/2, janela.height/16);
 
-    return save_name(points, "YOU WERE NOT ABLE TO FREE THE ERLHYU FROM THE CURSE", logo, bk);
+    return save_name(points, "YOU HAS FAILED IN FREE ERLHYU FROM THE CURSE", logo, bk);
                 
         
 def win_screen(points):
     bk = GameImage('assets/menus/gameover/winscreen.jpg');
     logo = Sprite("assets/menus/gameover/the_end.png");
     logo.set_position(janela.width/2 - logo.width/2, janela.height/16);
-    return save_name(points, "YOU WERE ABLE TO FREE THE ERLHYUNIANS FROM THE CURSE", logo, bk);
+    return save_name(points, "YOU HAVE SUCCESSFULLY FREED THE ERLHYUNIANS", logo, bk);
 
 def save_name(points, text, logo, bk):
     background = bk;
@@ -42,7 +42,7 @@ def save_name(points, text, logo, bk):
         #janela.set_background_color((0, 0 , 0));
         background.draw();
         logo.draw();
-        janela.draw_text(text, janela.width/8 - 90, janela.height/4, size = 50, color = (240,240,240), font_name=UI_FONT);
+        janela.draw_text(text, janela.width/8 + 50, janela.height/4, size = 50, color = (240,240,240), font_name=UI_FONT);
         janela.draw_text("ENTER YOUR NICKNAME", janela.width/2 - 200, janela.height/1.5, size = 50, color = (240,240,240), font_name=UI_FONT);
 
         if (mouse.is_over_object(qut)):
